@@ -11,13 +11,13 @@
 <script src="{% static 'js/bootstrap.min.js' %}" ></script>
 </head>
 
-<body>
-    <h4>User index page</h4>
+<body class="p-5">
+    <h4>Message send Through Websocket</h4>
     <div class="input-group mb-3">
         <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">@</span>
+            <span class="input-group-text" id="basic-addon1">Press ENTER<g/span>
         </div>
-        <input id="input-message" type="text" class="form-control" placeholder="Username" aria-label="Username"
+        <input id="input-message" type="text" class="form-control" placeholder="Message to server" aria-label="Message to server"
             aria-describedby="basic-addon1">
     </div>
     <div class="col-md-12 p-4 " id="message-box" >
@@ -46,6 +46,7 @@
             if (event.keyCode == 13) {
                 //alert($(this).val());
                 socket.send($(this).val());
+                $(this).val('');
             }
         });
     </script>

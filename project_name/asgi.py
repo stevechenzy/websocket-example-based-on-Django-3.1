@@ -14,15 +14,10 @@ import os
 from asgi_middleware_static_file import ASGIMiddlewareStaticFile
 from django.conf import settings
 from django.core.asgi import get_asgi_application
-
 from websocket.middleware import websockets
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'project_name.settings')
 
-
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'project_name.settings')
-
-# application = get_asgi_application()
 application = get_asgi_application()
 application = websockets(application)
 application = ASGIMiddlewareStaticFile(
