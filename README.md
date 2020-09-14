@@ -8,3 +8,21 @@ inspired by following articles:
 3. Alex Oleshkevich - [WebSockets in Django 3.1](https://medium.com/@alex.oleshkevich/websockets-in-django-3-1-73de70c5c1ba)
 
 4. [Coroutines and Tasks](https://docs.python.org/3/library/asyncio-task.html)
+
+5. [Python并发之异步I/O(async,await)](https://www.jianshu.com/p/db2e5d222bb9)
+
+----
+## Evironment Preparation
+1. Python 3.7 or 3.8
+2. Django 3.1
+3. uviorn
+   
+```sh
+python -m venv .venv # create virtual python environment
+pip install django # install django > 3.1
+pip install uvicorn  # install ASGI server
+git clone https://github.com/stevechenzy/websocket-example-based-on-Django-3.1.git # download source code project to local
+uvicorn project_name.asgi:application # run server
+```
+
+
